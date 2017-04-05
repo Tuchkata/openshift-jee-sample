@@ -17,7 +17,7 @@ public class TestService {
 		Connection connection = null;
 		try {
 			Class.forName("org.postgresql.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://postgresql-1-xu5dc:5432/", "test", "test");
+			connection = DriverManager.getConnection("jdbc:postgresql://172.17.0.5:5432/", "test", "test");
 		} catch (Exception e) {
 		}
 
