@@ -8,8 +8,13 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.apache.log4j.Logger;
+
 @Path("/")
 public class TestService {
+	
+	private final Logger logger = Logger.getLogger(TestService.class);
+	
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String ping() {
@@ -22,6 +27,7 @@ public class TestService {
 		}
 
 		if (connection != null) {
+			logger.info("Connection established!");
 			result = "Connection OK!";
 		}
 
